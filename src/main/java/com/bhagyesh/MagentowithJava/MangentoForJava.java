@@ -1,10 +1,6 @@
 package com.bhagyesh.MagentowithJava;
-
-
-
 import java.net.MalformedURLException;
 import java.util.HashMap;
-
 import redstone.xmlrpc.XmlRpcArray;
 import redstone.xmlrpc.XmlRpcClient;
 import redstone.xmlrpc.XmlRpcException;
@@ -14,7 +10,6 @@ public class MangentoForJava {
 	
 	public static void main(String args[]) throws MalformedURLException, XmlRpcException, XmlRpcFault
 	{
-		
 	// Use APi username and Password For Connecting to Magento XMLRPC API	
 	XmlRpcClient client=new XmlRpcClient("http://DOMAIN/IPADDRESS/magento/index.php/api/xmlrpc/?wsdl",false);
 	String sessionId=(String) client.invoke("login", new Object[] {"axelor","123456"});
@@ -28,7 +23,7 @@ public class MangentoForJava {
          // Create Object Array of Parameters and pass to Client Object to call method of API
          Object [] params = new Object [] {sessionId,"sales_order.list", new Object [] {filters}};
 	 XmlRpcArray orders = (XmlRpcArray)client.invoke("call", params);
-	     
+	  
 	 for (Object object : orders) {
 	    	 System.out.println("Data : ---- "+object);
 	 }	
