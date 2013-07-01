@@ -1,4 +1,4 @@
-package com.bhagyesh.MagentowithJava;
+package com.bhagyesh.MagentoWithJava;
 import java.net.MalformedURLException;
 import java.util.HashMap;
 import redstone.xmlrpc.XmlRpcArray;
