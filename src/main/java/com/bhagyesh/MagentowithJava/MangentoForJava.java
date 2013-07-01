@@ -16,7 +16,7 @@ public class MangentoForJava {
 	{
 		
 	// Use APi username and Password For Connecting to Magento XMLRPC API	
-	XmlRpcClient client=new XmlRpcClient("http://192.168.0.147/magento/index.php/api/xmlrpc/?wsdl",false);
+	XmlRpcClient client=new XmlRpcClient("http://DOMAIN/IPADDRESS/magento/index.php/api/xmlrpc/?wsdl",false);
 	String sessionId=(String) client.invoke("login", new Object[] {"axelor","123456"});
 		
 	// Create a hashmap for filter data of sales order 	
